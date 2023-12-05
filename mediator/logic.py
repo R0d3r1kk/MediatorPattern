@@ -24,7 +24,7 @@ class Mediator:
         self._components = set()
         self.response = None
 
-    def add(self, component, component_handler):
+    def add(self, component, component_handler:IRequestComponentHandler):
         """Add components"""
         new_component = Component(component, component_handler)
         self._components.add(new_component)
